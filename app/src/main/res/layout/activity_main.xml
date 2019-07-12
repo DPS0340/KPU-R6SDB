@@ -17,18 +17,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" app:srcCompat="@drawable/r6s_logo" android:id="@+id/imageView2"
                 android:scaleType="centerCrop"/>
-        <com.google.android.gms.ads.AdView
-                android:id="@+id/adView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                app:adSize="BANNER"
-                app:adUnitId="@string/banner_ad_unit_id" android:layout_marginBottom="666dp">
-        </com.google.android.gms.ads.AdView>
         <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:gravity="top" android:layout_weight="0.33">
+                <com.google.android.gms.ads.AdView
+                        android:id="@+id/adView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:adSize="BANNER"
+                        app:adUnitId="@string/banner_ad_unit_id">
+                </com.google.android.gms.ads.AdView>
+            </LinearLayout>
             <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
