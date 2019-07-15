@@ -1,24 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dps0340.R6SDB" >
+          package="com.dps0340.R6SDB">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
-        android:allowBackup="true"
-        android:icon="@mipmap/logo"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/logo"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+            android:allowBackup="true"
+            android:icon="@mipmap/logo"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/logo"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <activity android:name=".describeActivity">
+        </activity>
+        <activity
+                android:name=".gunActivity"
+                android:label="@string/title_activity_gun"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".opActivity">
+        </activity>
+        <activity android:name=".mapActivity">
+        </activity>
+
         <meta-data
                 android:name="com.google.android.gms.ads.APPLICATION_ID"
                 android:value="ca-app-pub-2196794833118843~8434871171"/>
-        <activity android:name=".MainActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
     </application>
