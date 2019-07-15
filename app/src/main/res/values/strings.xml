@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">R6S 백과사전</string>
     <string name="banner_ad_unit_id">ca-app-pub-2196794833118843/7173760394</string>
+    <string name="title_activity_gun">gunActivity</string>
 </resources>
