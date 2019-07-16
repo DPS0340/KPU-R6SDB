@@ -6,5 +6,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".opActivity">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/r6s_logo" android:id="@+id/imageView7"
+                android:scaleType="centerCrop"/>
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <android.support.v7.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/box"
+                    app:orientation="vertical">
+
+            </android.support.v7.widget.GridLayout>
+        </ScrollView>
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

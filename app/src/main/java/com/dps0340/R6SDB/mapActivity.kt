@@ -2,6 +2,8 @@ package com.dps0340.R6SDB
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.webkit.WebViewClient
+import kotlinx.android.synthetic.main.activity_map.*
 
 class mapActivity : AppCompatActivity() {
 
@@ -10,5 +12,8 @@ class mapActivity : AppCompatActivity() {
         setContentView(R.layout.activity_map)
         val actionBar = supportActionBar
         actionBar!!.title = "맵"
+        web.webViewClient = WebViewClient()
+        web.settings.javaScriptEnabled = true
+        web.loadUrl("https://www.r6maps.com/")
     }
 }
