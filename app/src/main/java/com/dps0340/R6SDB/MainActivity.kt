@@ -22,8 +22,8 @@ class MainActivity : AppCompatActivity() {
         val adRequest = AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).addTestDevice("CE3E359CA22C3DA6EA75412F4DC91633").build()
         mAdView.loadAd(adRequest)
         val op = findViewById<CardView>(R.id.op)
-        val gun = findViewById<CardView>(R.id.op)
-        val map = findViewById<CardView>(R.id.op)
+        val gun = findViewById<CardView>(R.id.gun)
+        val map = findViewById<CardView>(R.id.map)
 
         op.setOnClickListener {
             startActivity<opActivity>()
