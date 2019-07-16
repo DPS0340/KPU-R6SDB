@@ -10,5 +10,6 @@ class gunActivity : AppCompatActivity() {
         setContentView(R.layout.activity_gun)
         val actionBar = supportActionBar
         actionBar!!.title = "총"
+
     }
 }
