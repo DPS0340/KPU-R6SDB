@@ -16,11 +16,14 @@
         <activity
                 android:name=".gunActivity"
                 android:label="@string/title_activity_gun"
-                android:theme="@style/AppTheme.NoActionBar">
+                android:theme="@style/AppTheme.NoActionBar"
+                android:parentActivityName=".MainActivity">
         </activity>
-        <activity android:name=".opActivity">
+        <activity android:name=".opActivity"
+                  android:parentActivityName=".MainActivity">
         </activity>
-        <activity android:name=".mapActivity">
+        <activity android:name=".mapActivity"
+                  android:parentActivityName=".MainActivity">
         </activity>
 
         <meta-data
