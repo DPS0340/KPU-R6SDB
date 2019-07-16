@@ -42,7 +42,7 @@
                 <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent" app:srcCompat="@drawable/ash_picture"
-                        android:id="@+id/imageView4" android:scaleType="centerCrop"/>
+                        android:id="@+id/imageView4" android:scaleType="centerCrop" android:layout_marginTop="3dp"/>
             </LinearLayout>
             <LinearLayout
                     android:orientation="horizontal"
@@ -52,7 +52,7 @@
                 <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent" app:srcCompat="@drawable/vector"
-                        android:id="@+id/imageView5" android:scaleType="centerCrop"/>
+                        android:id="@+id/imageView5" android:scaleType="centerCrop" android:layout_marginTop="3dp"/>
             </LinearLayout>
             <LinearLayout
                     android:orientation="horizontal"
@@ -62,7 +62,7 @@
                 <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent" app:srcCompat="@drawable/tower"
-                        android:id="@+id/imageView6" android:scaleType="centerCrop"/>
+                        android:id="@+id/imageView6" android:scaleType="centerCrop" android:layout_marginTop="3dp"/>
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
