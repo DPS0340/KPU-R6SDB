@@ -10,6 +10,7 @@ import android.view.View
 import android.widget.LinearLayout
 import kotlinx.android.synthetic.main.activity_op.*
 import kotlinx.android.synthetic.main.item.*
+import org.jetbrains.anko.startActivity
 
 
 class opActivity : AppCompatActivity() {
@@ -23,6 +24,9 @@ class opActivity : AppCompatActivity() {
         val inflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         for(i in 0..24) {
             child = inflater.inflate(R.layout.item, null)
+            child.setOnClickListener {
+                startActivity<describeActivity>()
+            }
             box.addView(child, i)
             box.invalidate()
         }
