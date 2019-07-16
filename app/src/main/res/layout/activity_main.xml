@@ -19,16 +19,17 @@
                 android:scaleType="centerCrop"/>
         <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" android:weightSum="4">
             <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:gravity="top" android:layout_weight="0.33">
+                    android:layout_height="match_parent" android:gravity="top" android:layout_weight="1"
+            >
                 <com.google.android.gms.ads.AdView
                         android:id="@+id/adView"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         app:adSize="BANNER"
                         app:adUnitId="@string/banner_ad_unit_id">
                 </com.google.android.gms.ads.AdView>
@@ -36,35 +37,32 @@
             <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:gravity="center" android:layout_weight="1">
-                <Button
-                        android:text="OPERATOR"
+                    android:layout_height="match_parent" android:gravity="center"
+                    android:layout_weight="1">
+                <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/op" android:textSize="24sp" android:background="@android:color/holo_red_light"
-                        android:textColor="@color/colorAccent"/>
+                        android:layout_height="match_parent" app:srcCompat="@drawable/ash_picture"
+                        android:id="@+id/imageView4" android:scaleType="centerCrop"/>
             </LinearLayout>
             <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:gravity="center" android:layout_weight="1">
-                <Button
-                        android:text="GUN"
+                    android:layout_height="match_parent" android:gravity="center" android:layout_weight="1"
+            >
+                <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/gun" android:textSize="24sp" android:background="@android:color/holo_red_light"
-                        android:textColor="@color/colorAccent"/>
+                        android:layout_height="match_parent" app:srcCompat="@drawable/vector"
+                        android:id="@+id/imageView5" android:scaleType="centerCrop"/>
             </LinearLayout>
             <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:gravity="center" android:layout_weight="1">
-                <Button
-                        android:text="MAP"
+                    android:layout_height="match_parent" android:gravity="center" android:layout_weight="1"
+            >
+                <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/map" android:textSize="24sp" android:background="@android:color/holo_red_light"
-                        android:textColor="@color/colorAccent"/>
+                        android:layout_height="match_parent" app:srcCompat="@drawable/tower"
+                        android:id="@+id/imageView6" android:scaleType="centerCrop"/>
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
