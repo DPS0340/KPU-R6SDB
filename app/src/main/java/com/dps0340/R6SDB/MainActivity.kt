@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         mAdView = findViewById(R.id.adView)
-        val adRequest = AdRequest.Builder().addTestDevice("CE3E359CA22C3DA6EA75412F4DC91633").build()
+        val adRequest = AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).addTestDevice("CE3E359CA22C3DA6EA75412F4DC91633").build()
         mAdView.loadAd(adRequest)
     }
 }
