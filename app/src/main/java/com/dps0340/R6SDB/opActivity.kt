@@ -7,10 +7,14 @@ import android.content.Context.LAYOUT_INFLATER_SERVICE
 import android.support.v7.widget.CardView
 import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.LinearLayout
 import kotlinx.android.synthetic.main.activity_op.*
 import kotlinx.android.synthetic.main.item.*
 import org.jetbrains.anko.startActivity
+import android.widget.TableLayout
+
+
 
 
 class opActivity : AppCompatActivity() {
@@ -21,13 +25,20 @@ class opActivity : AppCompatActivity() {
         val actionBar = supportActionBar
         actionBar!!.title = "오퍼레이터"
         var child: View
+        var parent: LinearLayout
         val inflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        for(i in 0..24) {
-            child = inflater.inflate(R.layout.item, null)
-            child.setOnClickListener {
-                startActivity<describeActivity>()
+        for(i in 0..9) {
+            parent = LinearLayout(this)
+            parent.weightSum = 4f
+            for(j in 0..3) {
+                child = inflater.inflate(R.layout.item, null)
+                child.layoutParams = TableLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT, 1f)
+                child.setOnClickListener {
+                    startActivity<describeActivity>()
+                }
+                parent.addView(child, j)
             }
-            box.addView(child, i)
+            box.addView(parent, i)
             box.invalidate()
         }
     }
