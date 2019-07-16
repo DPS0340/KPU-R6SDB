@@ -16,7 +16,6 @@
         <activity
                 android:name=".gunActivity"
                 android:label="@string/title_activity_gun"
-                android:theme="@style/AppTheme.NoActionBar"
                 android:parentActivityName=".MainActivity">
         </activity>
         <activity android:name=".opActivity"
