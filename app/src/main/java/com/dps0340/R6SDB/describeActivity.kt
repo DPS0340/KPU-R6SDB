@@ -37,13 +37,18 @@ class describeActivity : AppCompatActivity() {
         val id = int.getStringExtra("id")
         Log.i("intent", "intent id is" + id)
         val name = id + "_picture"
-        val resID = res.getIdentifier(name, "drawable", packageName)
+        val name2 = id + "_logo"
+        var resID = res.getIdentifier(name, "drawable", packageName)
         picture.setImageResource(resID)
+        resID = res.getIdentifier(name2, "drawable", packageName)
+        logo.setImageResource(resID)
         val actionBar = supportActionBar
         actionBar!!.title = id
         vV = findViewById<VideoView>(R.id.vv)
         vV.setVideoPath("android.resource://" + packageName + "/" + R.raw.sledgeanimation)
         vV.start()
-        vV.setOnCompletionListener(MediaPlayer.OnCompletionListener { vV.start() })
+        vV.setOnCompletionListener(MediaPlayer.OnCompletionListener {
+            vV.start()
+        })
     }
 }
