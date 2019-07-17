@@ -34,7 +34,7 @@
                     android:id="@+id/op" android:clickable="true" android:focusable="true">
                 <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" app:srcCompat="@drawable/ash_picture"
+                        android:layout_height="match_parent" app:srcCompat="@drawable/ash_picture_for_root"
                         android:id="@+id/imageView6" android:scaleType="centerCrop"/>
                 <TextView
                         android:text="오퍼레이터"
