@@ -6,7 +6,9 @@ import android.media.MediaPlayer
 import android.widget.VideoView
 import android.R.attr.start
 import android.content.Intent
+import android.media.AudioManager
 import android.util.Log
+import android.widget.MediaController
 import kotlinx.android.synthetic.main.activity_describe.*
 import kotlinx.android.synthetic.main.item.view.*
 
@@ -46,8 +48,13 @@ class describeActivity : AppCompatActivity() {
         actionBar!!.title = id
         vV = findViewById<VideoView>(R.id.vv)
         vV.setVideoPath("android.resource://" + packageName + "/" + R.raw.sledgeanimation)
-        vV.start()
+        vV.setAudioFocusRequest(AudioManager.AUDIOFOCUS_NONE)
+        vV.setOnPreparedListener(MediaPlayer.OnPreparedListener {
+            it.setVolume(0f, 0f)
+            vV.start()
+        })
         vV.setOnCompletionListener(MediaPlayer.OnCompletionListener {
+            it.setVolume(0f, 0f)
             vV.start()
         })
     }
