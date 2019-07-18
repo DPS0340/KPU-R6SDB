@@ -7,24 +7,27 @@
 
     <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/relativeLayout2"
+            android:layout_height="wrap_content" android:id="@+id/relativeLayout1"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent">
 
         <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
             <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" app:srcCompat="@drawable/vector" android:id="@+id/imageView"
-                    android:scaleType="centerInside" android:adjustViewBounds="true"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" app:srcCompat="@drawable/gun_c75_auto" android:id="@+id/img"
+                    android:scaleType="centerCrop" android:adjustViewBounds="true"/>
             <TextView
                     android:text="VECTOR"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/textView"
-                    android:layout_centerHorizontal="true" android:layout_alignParentTop="true"
-                    android:layout_marginTop="202dp" android:textSize="30sp" android:textColor="@color/colorAccent"
-                    android:fontFamily="sans-serif-thin"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/text"
+                    android:textSize="24sp" android:textColor="@color/colorAccent"
+                    android:fontFamily="sans-serif-thin"
+                    android:layout_below="@+id/img"
+                    android:layout_alignStart="@+id/img"
+                    android:layout_alignEnd="@+id/img" app:autoSizeTextType="uniform" android:layout_marginTop="-38dp"
+                    android:layout_marginStart="9dp" android:layout_marginEnd="-9dp" android:textAlignment="center"/>
         </RelativeLayout>
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
