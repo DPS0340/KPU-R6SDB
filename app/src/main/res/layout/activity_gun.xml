@@ -7,4 +7,18 @@
         android:layout_height="match_parent"
         tools:context=".gunActivity">
 
+    <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/sc" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+    >
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/gunroot"
+        >
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>
