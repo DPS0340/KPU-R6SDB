@@ -34,10 +34,12 @@ class opActivity : AppCompatActivity() {
         val res = resources
         parent = LinearLayout(this)
         parent.weightSum = 4f
+        var end = false
         for(i in 0..len) {
             if(i % 4 == 0 && i != 0) {
                 parent = LinearLayout(this)
                 parent.weightSum = 4f
+                end = false
             }
             child = inflater.inflate(R.layout.item, null)
             child.layoutParams = TableLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT, 1f)
@@ -52,6 +54,11 @@ class opActivity : AppCompatActivity() {
             parent.addView(child, i % 4)
             if(i % 4 == 0) {
                 box.addView(parent, i / 4)
+                box.invalidate()
+                end = true
+            }
+            if(i == len && !end) {
+                box.addView(parent, i / 4 + 1)
                 box.invalidate()
             }
         }
