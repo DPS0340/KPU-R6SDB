@@ -7,6 +7,8 @@ import android.widget.VideoView
 import android.R.attr.start
 import android.content.Intent
 import android.media.AudioManager
+import android.os.Build
+import android.support.annotation.RequiresApi
 import android.util.Log
 import android.widget.MediaController
 import kotlinx.android.synthetic.main.activity_describe.*
@@ -31,6 +33,7 @@ class describeActivity : AppCompatActivity() {
         vV.seekTo(seekTime)
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_describe)
