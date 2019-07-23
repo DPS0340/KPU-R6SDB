@@ -26,7 +26,9 @@ class opActivity : AppCompatActivity() {
         setContentView(R.layout.activity_op)
         val actionBar = supportActionBar
         actionBar!!.title = "오퍼레이터"
-        val arr = ["nokk", "warden", "mozzie", "gridlock", "nomad", "kaid", "clash", "maverick", "maestro", "alibi", "lion", "finka", "vigil", "dokkaebi", "zofia", "ela", "ying", "lesion", "mira", "jackal", "hibana", "echo", "caveira", "capitao", "blackbeard", "valkyrie", "buck", "frost", "mute", "sledge", "smoke", "thatcher", "ash", "castle", "pulse", "thermite", "montagne", "twitch", "doc", "rook", "jager", "bandit", "blitz", "iq", "fuze", "glaz", "tachanka", "kapkan"]
+        val arr = JSONArray(
+            "[\"nokk\", \"warden\", \"mozzie\", \"gridlock\", \"nomad\", \"kaid\", \"clash\", \"maverick\", \"maestro\", \"alibi\", \"lion\", \"finka\", \"vigil\", \"dokkaebi\", \"zofia\", \"ela\", \"ying\", \"lesion\", \"mira\", \"jackal\", \"hibana\", \"echo\", \"caveira\", \"capitao\", \"blackbeard\", \"valkyrie\", \"buck\", \"frost\", \"mute\", \"sledge\", \"smoke\", \"thatcher\", \"ash\", \"castle\", \"pulse\", \"thermite\", \"montagne\", \"twitch\", \"doc\", \"rook\", \"jager\", \"bandit\", \"blitz\", \"iq\", \"fuze\", \"glaz\", \"tachanka\", \"kapkan\"]\n"
+        )
         var child: View
         var parent: LinearLayout
         val inflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
