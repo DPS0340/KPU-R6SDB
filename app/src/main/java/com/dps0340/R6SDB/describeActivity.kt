@@ -28,9 +28,17 @@ class describeActivity : AppCompatActivity() {
                 ViewGroup.LayoutParams.WRAP_CONTENT
             )
         )
-        TextViewCompat.setAutoSizeTextTypeWithDefaults(this, TextViewCompat.AUTO_SIZE_TEXT_TYPE_UNIFORM)
+        this.textSize = 20.0f
         this.gravity = Gravity.CENTER
     }
+
+    fun LinearLayout.decorate() {
+        this.orientation = LinearLayout.VERTICAL
+        this.gravity = Gravity.CENTER_VERTICAL
+    }
+
+
+
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,9 +62,7 @@ class describeActivity : AppCompatActivity() {
         val isop = opinfo.has(id)
 
         val root = findViewById<LinearLayout>(R.id.root)
-        root.orientation = LinearLayout.VERTICAL
-        root.gravity = Gravity.CENTER_VERTICAL
-
+        root.decorate()
 
         if (isgun) {
             val name = id
@@ -94,18 +100,18 @@ class describeActivity : AppCompatActivity() {
         if (keyExpected == null) {
             val keys = obj.names()
             for (i in 0..obj.length()-1) {
-                dynamicJSONTextView(obj, rootV, keys.getString(i))
+                dynamicJSONTextView(obj, rootV, keys.getString(i)) // 재귀적 forEach로 모든 원소를 call
             }
-            return
+            return // 모든 loop가 끝난 후 함수 종료
         } else {
-            key = keyExpected!!
-            value = obj.getString(key)
+            key = keyExpected!! // Not Null
+            value = obj.getString(key) // key로 value 가지고오기
         }
         val usingLL = LinearLayout(this)
-        usingLL.orientation = LinearLayout.VERTICAL
-        usingLL.gravity = Gravity.CENTER_VERTICAL
+        usingLL.decorate()
         var isjsonobj: Boolean
         var isjsonarr: Boolean
+        // 두번의 타입 체크
         try {
             JSONObject(value)
             isjsonobj = true
@@ -122,12 +128,11 @@ class describeActivity : AppCompatActivity() {
             val title = TextView(this)
             title.setText(key)
             title.decorate()
-            dynamicJSONTextView(JSONObject(value), usingLL, null)
+            dynamicJSONTextView(JSONObject(value), usingLL, null) // value에 있는 모든 원소를 call
             usingLL.invalidate()
         } else if (isjsonarr) {
             val LL = LinearLayout(this)
-            LL.orientation = LinearLayout.VERTICAL
-            LL.gravity = Gravity.CENTER_VERTICAL
+            LL.decorate()
             val arr = JSONArray(value)
             for (j in 0..arr.length() - 1) {
                 val textV = TextView(this)
@@ -142,8 +147,7 @@ class describeActivity : AppCompatActivity() {
             val keyText = TextView(this)
             val valueText = TextView(this)
             val LL = LinearLayout(this)
-            LL.orientation = LinearLayout.VERTICAL
-            LL.gravity = Gravity.CENTER_VERTICAL
+            LL.decorate()
             keyText.setText(key)
             keyText.decorate()
             valueText.setText(value)

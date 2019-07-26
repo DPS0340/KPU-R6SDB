@@ -43,23 +43,23 @@ class opActivity : AppCompatActivity() {
                 parent.weightSum = 4f
                 end = false
             }
-            child = inflater.inflate(R.layout.item, null)
+            child = inflater.inflate(R.layout.item, null) // 아이콘
             child.layoutParams = TableLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT, 1f)
             val name = arr[i] as String +"_logo"
             val resID = res.getIdentifier(name, "drawable", packageName)
             child.image.setImageResource(resID)
             child.setOnClickListener {
                 startActivity<describeActivity>(
-                    "id" to arr[i].toString()
+                    "id" to arr[i].toString() // ex) id변수에 mozzie 대입
                 )
             }
-            parent.addView(child, i % 4)
+            parent.addView(child, i % 4) // 가로로 0, 1, 2, 3, 0, 1, 2, 3...
             if(i % 4 == 0) {
-                box.addView(parent, i / 4)
-                box.invalidate()
+                box.addView(parent, i / 4) // if문 기준으로 세로로 0, 1, 2, 3, 4, 5...
+                box.invalidate() // ViewGroup을 Refresh 해줌
                 end = true
             }
-            if(i == len && !end) {
+            if(i == len && !end) { // 마지막 index지만 마지막 LinearLayout이 적용이 안됐을 때
                 box.addView(parent, i / 4 + 1)
                 box.invalidate()
             }
