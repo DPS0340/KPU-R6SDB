@@ -4,11 +4,8 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Build
 import android.support.annotation.RequiresApi
-import android.support.annotation.StringRes
-import android.support.v4.widget.TextViewCompat
 import android.util.Log
 import android.view.Gravity
-import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -94,12 +91,12 @@ class describeActivity : AppCompatActivity() {
         actionBar!!.title = id
     }
 
-    fun dynamicJSONTextView(obj: JSONObject, rootV: LinearLayout, keyExpected: String?) {
+    private fun dynamicJSONTextView(obj: JSONObject, rootV: LinearLayout, keyExpected: String?) {
         val key: String
         val value: String
         if (keyExpected == null) {
             val keys = obj.names()
-            for (i in 0..obj.length()-1) {
+            for (i in 0 until obj.length()) {
                 dynamicJSONTextView(obj, rootV, keys.getString(i)) // 재귀적 forEach로 모든 원소를 call
             }
             return // 모든 loop가 끝난 후 함수 종료
@@ -109,34 +106,34 @@ class describeActivity : AppCompatActivity() {
         }
         val usingLL = LinearLayout(this)
         usingLL.decorate()
-        var isjsonobj: Boolean
-        var isjsonarr: Boolean
+        var isJsonObj: Boolean
+        var isJsonArr: Boolean
         // 두번의 타입 체크
         try {
             JSONObject(value)
-            isjsonobj = true
+            isJsonObj = true
         } catch (e: org.json.JSONException) {
-            isjsonobj = false
+            isJsonObj = false
         }
         try {
             JSONArray(value)
-            isjsonarr = true
+            isJsonArr = true
         } catch (e: org.json.JSONException) {
-            isjsonarr = false
+            isJsonArr = false
         }
-        if (isjsonobj) {
+        if (isJsonObj) {
             val title = TextView(this)
-            title.setText(key)
+            title.text = key
             title.decorate()
             dynamicJSONTextView(JSONObject(value), usingLL, null) // value에 있는 모든 원소를 call
             usingLL.invalidate()
-        } else if (isjsonarr) {
+        } else if (isJsonArr) {
             val LL = LinearLayout(this)
             LL.decorate()
             val arr = JSONArray(value)
-            for (j in 0..arr.length() - 1) {
+            for (j in 0 until arr.length()) {
                 val textV = TextView(this)
-                textV.setText(arr[j].toString())
+                textV.text = arr[j].toString()
                 textV.decorate()
                 LL.addView(textV)
                 LL.invalidate()
@@ -148,9 +145,9 @@ class describeActivity : AppCompatActivity() {
             val valueText = TextView(this)
             val LL = LinearLayout(this)
             LL.decorate()
-            keyText.setText(key)
+            keyText.text = key
             keyText.decorate()
-            valueText.setText(value)
+            valueText.text = value
             valueText.decorate()
             LL.addView(keyText)
             LL.addView(valueText)

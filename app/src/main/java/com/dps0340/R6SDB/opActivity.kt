@@ -3,20 +3,15 @@ package com.dps0340.R6SDB
 import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.content.Context.LAYOUT_INFLATER_SERVICE
-import android.content.res.Resources
-import android.support.v7.widget.CardView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import kotlinx.android.synthetic.main.activity_op.*
-import kotlinx.android.synthetic.main.item.*
 import org.jetbrains.anko.startActivity
 import android.widget.TableLayout
 import kotlinx.android.synthetic.main.item.view.*
 import org.json.JSONArray
-import org.json.JSONObject
 
 
 class opActivity : AppCompatActivity() {

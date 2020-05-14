@@ -4,14 +4,8 @@ import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.widget.TableLayout
 import kotlinx.android.synthetic.main.activity_gun.*
-import kotlinx.android.synthetic.main.activity_op.*
 import kotlinx.android.synthetic.main.gun_item.view.*
-import kotlinx.android.synthetic.main.item.view.*
 import org.jetbrains.anko.startActivity
 import org.json.JSONArray
 
