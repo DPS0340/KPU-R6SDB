@@ -8,6 +8,7 @@ import kotlinx.android.synthetic.main.activity_gun.*
 import kotlinx.android.synthetic.main.gun_item.view.*
 import org.jetbrains.anko.startActivity
 import org.json.JSONArray
+import java.util.*
 
 class gunActivity : AppCompatActivity() {
 
@@ -27,9 +28,9 @@ class gunActivity : AppCompatActivity() {
             val name = arr[i] as String
             val resID = res.getIdentifier(name, "drawable", packageName)
             gun.img.setImageResource(resID)
-            gun.text.setText(name.replace("_", " ").replace("gun ", "").toUpperCase())
+            gun.text.setText(name.replace("_", " ").replace("gun ", "").toUpperCase(Locale.getDefault()))
             gun.setOnClickListener {
-                startActivity<describeActivity>(
+                startActivity<DescribeActivity>(
                     "id" to arr[i].toString()
                 )
             }

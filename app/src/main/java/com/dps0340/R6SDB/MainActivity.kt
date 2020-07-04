@@ -10,15 +10,11 @@ import org.jetbrains.anko.startActivity
 
 class MainActivity : AppCompatActivity() {
 
-//    private lateinit var mAdView: AdView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//        mAdView = findViewById(R.id.adView)
-//        val adRequest = AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).addTestDevice("CE3E359CA22C3DA6EA75412F4DC91633").build()
-//        mAdView.loadAd(adRequest)
         val op = findViewById<CardView>(R.id.op)
         val gun = findViewById<CardView>(R.id.gun)
         val map = findViewById<CardView>(R.id.map)

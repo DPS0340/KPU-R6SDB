@@ -44,7 +44,7 @@ class opActivity : AppCompatActivity() {
             val resID = res.getIdentifier(name, "drawable", packageName)
             child.image.setImageResource(resID)
             child.setOnClickListener {
-                startActivity<describeActivity>(
+                startActivity<DescribeActivity>(
                     "id" to arr[i].toString() // ex) id변수에 mozzie 대입
                 )
             }

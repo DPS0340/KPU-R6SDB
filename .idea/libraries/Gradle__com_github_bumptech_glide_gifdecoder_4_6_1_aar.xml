@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.bumptech.glide:gifdecoder:4.6.1@aar">
     <ANNOTATIONS>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/768ab66d6cf5c2476bfd3e3cdb124160/gifdecoder-4.6.1/annotations.zip!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/56a1a7417030b2a649932996d89c30f4/gifdecoder-4.6.1/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/768ab66d6cf5c2476bfd3e3cdb124160/gifdecoder-4.6.1/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/768ab66d6cf5c2476bfd3e3cdb124160/gifdecoder-4.6.1/res" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/56a1a7417030b2a649932996d89c30f4/gifdecoder-4.6.1/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/56a1a7417030b2a649932996d89c30f4/gifdecoder-4.6.1/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/gifdecoder/4.6.1/aaafdc80bac2c42ca0e795c12cb37e8abcf784e1/gifdecoder-4.6.1-javadoc.jar!/" />
