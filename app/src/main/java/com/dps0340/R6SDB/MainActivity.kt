@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
             startActivity<opActivity>()
         }
         gun.setOnClickListener {
-            startActivity<gunActivity>()
+            startActivity<GunActivity>()
         }
         map.setOnClickListener {
             startActivity<mapActivity>()

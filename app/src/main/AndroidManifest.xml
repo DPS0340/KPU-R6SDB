@@ -14,7 +14,7 @@
         <activity android:name=".DescribeActivity">
         </activity>
         <activity
-                android:name=".gunActivity"
+                android:name=".GunActivity"
                 android:label="@string/title_activity_gun"
                 android:parentActivityName=".MainActivity">
         </activity>
